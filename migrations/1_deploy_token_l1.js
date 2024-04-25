@@ -1,7 +1,7 @@
 /*
 truffle migrate -f 1 --to 1 --network sepolia
 npx truffle run verify MockERC20 --verifiers=etherscan --network sepolia
- */
+*/
 
 const MockERC20 = artifacts.require('MockERC20');
 

@@ -1,0 +1,316 @@
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 5 --to 5 --network sepolia
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Starting migrations...
+======================
+> Network name:    'sepolia'
+> Network id:      11155111
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+5_deploy_nft_l1.js
+==================
+Owner: 0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+
+   Deploying 'MockERC721Upgradeable'
+   ---------------------------------
+   > transaction hash:    0xb658ef5d09ce4fd6ef08130d41bb4126c178bd34eb00ef482d9ecae4d6741b65
+   > Blocks: 1            Seconds: 17
+   > contract address:    0x15e67AB6A07D2222766AD24Dd71d31cEBDC79d42
+   > block number:        5773514
+   > block timestamp:     1714037316
+   > account:             0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+   > balance:             1.960877851237363649
+   > gas used:            1768655 (0x1afccf)
+   > gas price:           6.585615027 gwei
+   > value sent:          0 ETH
+   > total cost:          0.011647680945578685 ETH
+
+
+   Deploying 'ProxyAdmin'
+   ----------------------
+   > transaction hash:    0xb2ec70ad7bed82029a64957264df7afb3e25ceca36546700662a744862e5c89b
+   > Blocks: 2            Seconds: 14
+   > contract address:    0xe747d62E687955c4f7a018C4b0D768284607De18
+   > block number:        5773517
+   > block timestamp:     1714037352
+   > account:             0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+   > balance:             1.958120315313097526
+   > gas used:            443289 (0x6c399)
+   > gas price:           6.220627907 gwei
+   > value sent:          0 ETH
+   > total cost:          0.002757535924266123 ETH
+
+
+   Deploying 'TransparentUpgradeableProxy'
+   ---------------------------------------
+   > transaction hash:    0x8ef16a10640c942667c64d3c986f7574ef388973cab26dfa8070c83c0e521d38
+   > Blocks: 2            Seconds: 21
+   > contract address:    0x43Ac6EfF5177E9b6c5C901f91d85d26A6d2bdaf9
+   > block number:        5773520
+   > block timestamp:     1714037388
+   > account:             0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+   > balance:             1.953604783498086134
+   > gas used:            757904 (0xb9090)
+   > gas price:           5.957920548 gwei
+   > value sent:          0 ETH
+   > total cost:          0.004515531815011392 ETH
+
+NFTL1: 0x43Ac6EfF5177E9b6c5C901f91d85d26A6d2bdaf9
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.0189207486848562 ETH
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.0189207486848562 ETH
+
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ npx truffle run verify MockERC721Upgradeable --verifiers=etherscan --network sepolia
+
+Verifying contracts on etherscan
+   Verifying MockERC721Upgradeable
+   Verifying proxy implementation MockERC721Upgradeable at 0x15e67ab6a07d2222766ad24dd71d31cebdc79d42
+   Linking proxy and implementation addresses
+   Pass - Verified: https://sepolia.etherscan.io/address/0x43Ac6EfF5177E9b6c5C901f91d85d26A6d2bdaf9#code
+   Successfully verified 1 contract(s).
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 6 --to 6 --network sepolia
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Starting migrations...
+======================
+> Network name:    'sepolia'
+> Network id:      11155111
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+6_deploy_nft_bridge_l1.js
+=========================
+Owner: 0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+
+   Deploying 'ERC721BridgeL1'
+   --------------------------
+   > transaction hash:    0x2e3861f30983f27c2193d6ffa7c4366fd8f7cef5826e6540ea94ce642dc9976a
+   > Blocks: 2            Seconds: 17
+   > contract address:    0xc212c6bf78dFAA3c843031FC490137ffBffB78bb
+   > block number:        5773538
+   > block timestamp:     1714037604
+   > account:             0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+   > balance:             1.945520422135460898
+   > gas used:            1544642 (0x1791c2)
+   > gas price:           4.934264112 gwei
+   > value sent:          0 ETH
+   > total cost:          0.007621671586487904 ETH
+
+
+   Deploying 'TransparentUpgradeableProxy'
+   ---------------------------------------
+   > transaction hash:    0xebbe83f1688fc34bde1adffc01a4683b122ff9beac06fb5d16e6202997fbbb63
+   > Blocks: 2            Seconds: 17
+   > contract address:    0x73ECfE614Ec61e388552b790A830263E823fF72F
+   > block number:        5773541
+   > block timestamp:     1714037640
+   > account:             0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+   > balance:             1.941717227940947218
+   > gas used:            754414 (0xb82ee)
+   > gas price:           5.04125612 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00380319419451368 ETH
+
+ERC721BridgeL1: 0x73ECfE614Ec61e388552b790A830263E823fF72F
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.011424865781001584 ETH
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.011424865781001584 ETH
+
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ npx truffle run verify ERC721BridgeL1 --verifiers=etherscan --network sepolia
+Verifying contracts on etherscan
+   Verifying ERC721BridgeL1
+   Verifying proxy implementation ERC721BridgeL1 at 0xc212c6bf78dfaa3c843031fc490137ffbffb78bb
+   Linking proxy and implementation addresses
+   Pass - Verified: https://sepolia.etherscan.io/address/0x73ECfE614Ec61e388552b790A830263E823fF72F#code
+   Successfully verified 1 contract(s).
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 7 --to 7 --network baseSepolia
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Starting migrations...
+======================
+> Network name:    'baseSepolia'
+> Network id:      84532
+> Block gas limit: 45000000 (0x2aea540)
+
+
+7_deploy_nft_l2.js
+==================
+Owner: 0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+
+   Deploying 'MockERC721Upgradeable'
+   ---------------------------------
+   > transaction hash:    0x3dfd089393863bdf4a9d5b5f497d67ab1c70dbd96bb6f8ff0493b665726d8818
+   > Blocks: 4            Seconds: 9
+   > contract address:    0x643587D2a1814d53f39D99f3572D0d2c55880E70
+   > block number:        9134759
+   > block timestamp:     1714037806
+   > account:             0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+   > balance:             1.186680016919670027
+   > gas used:            1768655 (0x1afccf)
+   > gas price:           2.500000297 gwei
+   > value sent:          0 ETH
+   > total cost:          0.004421638025290535 ETH
+
+
+   Deploying 'ProxyAdmin'
+   ----------------------
+   > transaction hash:    0x30b28529f1d69f42fec1d5f317c8ad92da02eec03b1689b40415319ddf2ec0b2
+   > Blocks: 5            Seconds: 9
+   > contract address:    0xdEf640235347FD678A0100303f3a2E3473dD8847
+   > block number:        9134769
+   > block timestamp:     1714037826
+   > account:             0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+   > balance:             1.185514130433309526
+   > gas used:            443289 (0x6c399)
+   > gas price:           2.500000296 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001108222631213544 ETH
+
+
+   Deploying 'TransparentUpgradeableProxy'
+   ---------------------------------------
+   > transaction hash:    0x65e4c94d59ce84f696ebd73ab47d93c71d97b032fcfd937c75167489afcb33d2
+   > Blocks: 2            Seconds: 5
+   > contract address:    0x8cC59CE4ac2E7d60ed49ec01CF9F1e02fCC1340f
+   > block number:        9134778
+   > block timestamp:     1714037844
+   > account:             0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+   > balance:             1.183502946219984148
+   > gas used:            757892 (0xb9084)
+   > gas price:           2.500000298 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001894730225851816 ETH
+
+NFTL2: 0x8cC59CE4ac2E7d60ed49ec01CF9F1e02fCC1340f
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.007424590882355895 ETH
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.007424590882355895 ETH
+
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ nnpx truffle run verify MockERC721Upgradeable --verifiers=etherscan --network baseSepolia
+Verifying contracts on basescan
+   Verifying MockERC721Upgradeable
+   Verifying proxy implementation MockERC721Upgradeable at 0x643587d2a1814d53f39d99f3572d0d2c55880e70
+   Linking proxy and implementation addresses
+   Pass - Verified: https://sepolia.basescan.org/address/0x8cC59CE4ac2E7d60ed49ec01CF9F1e02fCC1340f#code
+   Successfully verified 1 contract(s).
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 8 --to 8 --network baseSepolia
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Starting migrations...
+======================
+> Network name:    'baseSepolia'
+> Network id:      84532
+> Block gas limit: 45000000 (0x2aea540)
+
+
+8_deploy_nft_bridge_l2.js
+=========================
+Owner: 0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+
+   Deploying 'ERC721BridgeL2'
+   --------------------------
+   > transaction hash:    0xed663de5eea913c9155d163bbb2d7f0f31acb9b1000d17d3816b277b5234b68e
+   > Blocks: 5            Seconds: 9
+   > contract address:    0x15e67AB6A07D2222766AD24Dd71d31cEBDC79d42
+   > block number:        9134831
+   > block timestamp:     1714037950
+   > account:             0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+   > balance:             1.179357673771062525
+   > gas used:            1589834 (0x18424a)
+   > gas price:           2.500000302 gwei
+   > value sent:          0 ETH
+   > total cost:          0.003974585480129868 ETH
+
+
+   Deploying 'TransparentUpgradeableProxy'
+   ---------------------------------------
+   > transaction hash:    0x462bcf9d8e20c63181f8bea824e2dc43b315e38d505c9c5d914b0affcf84f1cc
+   > Blocks: 4            Seconds: 9
+   > contract address:    0xe747d62E687955c4f7a018C4b0D768284607De18
+   > block number:        9134842
+   > block timestamp:     1714037972
+   > account:             0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+   > balance:             1.177393263515897451
+   > gas used:            754402 (0xb82e2)
+   > gas price:           2.500000302 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001886005227829404 ETH
+
+ERC721BridgeL2: 0xe747d62E687955c4f7a018C4b0D768284607De18
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.005860590707959272 ETH
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.005860590707959272 ETH
+
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ npx truffle run verify ERC721BridgeL2 --verifiers=etherscan --network baseSepolia
+Verifying contracts on basescan
+   Verifying ERC721BridgeL2
+   Verifying proxy implementation ERC721BridgeL2 at 0x15e67ab6a07d2222766ad24dd71d31cebdc79d42
+   Linking proxy and implementation addresses
+   Pass - Verified: https://sepolia.basescan.org/address/0xe747d62E687955c4f7a018C4b0D768284607De18#code
+   Successfully verified 1 contract(s).
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 9 --to 9 --network sepolia
+setPeer: 0x1a1018c606078d9b95ce400d28934a142e18b8dec7f63a393f9c3e35bc07d61c
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 9 --to 9 --network baseSepolia
+setPeer: 0x4f8e957e2508a408b83b6040cf965526f3df23dc3a79bbcfad1d4e1f2c9b6a5e
+grantRoleMint: 0xbe5562bc905e610efb7655fa2cff60fd1dfe5c1c18525f18aac0ee9aa0e9f8af
+grantRoleBurn: 0x40ada00dd050c7fc82b5882952d5d2c9419e3712f8e0e4a5c33a59026715b557
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 9 --to 9 --network sepolia
+Owner: 0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+quoteSend { nativeFee: '1407142006085835826', lzTokenFee: '0' }
+setApprovalForAll 0x67f58da5aed0d685ff09332971a701ab5a85f15c6944de697974f7083964c890
+Send token 0 to 40245: 0x8a0aab288a417a3698568f0685c033ff9ba539642371b55a8a5c8961b95314ec
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 9 --to 9 --network baseSepolia
+Owner: 0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+quoteSend { nativeFee: '65804729458946', lzTokenFee: '0' }
+setApprovalForAll 0x50c1085a6e4782f146ff2b1bc8199bcef36697471693bae4ba4d66572ee9489f
+Send token 0 to 40161: 0x0545b58111f724067091d675060a69a28c619888f0c270147febe3f9fda16e88
+
+https://testnet.layerzeroscan.com/address/0xe747d62e687955c4f7a018c4b0d768284607de18

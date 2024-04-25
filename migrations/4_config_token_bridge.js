@@ -1,7 +1,8 @@
 /*
 truffle migrate -f 4 --to 4 --network sepolia
 truffle migrate -f 4 --to 4 --network baseSepolia
- */
+*/
+
 const { addressToBytes32, toWei } = require('../scripts_truffle/utils');
 
 const ERC20 = artifacts.require('ERC20');

@@ -1,7 +1,7 @@
 /*
 truffle migrate -f 2 --to 2 --network sepolia
 npx truffle run verify MockOFTAdapter --verifiers=etherscan --network sepolia
- */
+*/
 
 const MockOFTAdapter = artifacts.require('MockOFTAdapter');
 
