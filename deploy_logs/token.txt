@@ -1,0 +1,158 @@
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 1 --to 1 --network sepolia
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+Starting migrations...
+======================
+> Network name:    'sepolia'
+> Network id:      11155111
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_deploy_token_l1.js
+====================
+Owner: 0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+
+   Deploying 'MockERC20'
+   ---------------------
+   > transaction hash:    0x12cff2311e2c7f88bdbdab25a28a9e546fb0b40f0b59fcdcd1ee713cc49f8679
+   > Blocks: 1            Seconds: 14
+   > contract address:    0x17D3e3819830672DC29cb7192b6641c297b0B838
+   > block number:        5773317
+   > block timestamp:     1714034892
+   > account:             0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+   > balance:             0.296304579244220736
+   > gas used:            643392 (0x9d140)
+   > gas price:           5.743653567 gwei
+   > value sent:          0 ETH
+   > total cost:          0.003695420755779264 ETH
+
+TokenL1: 0x17D3e3819830672DC29cb7192b6641c297b0B838
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.003695420755779264 ETH
+
+Summary
+=======
+> Total deployments:   1
+> Final cost:          0.003695420755779264 ETH
+
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ npx truffle run verify MockERC20 --verifiers=etherscan --network sepolia
+Verifying contracts on etherscan
+   Verifying MockERC20
+   Pass - Verified: https://sepolia.etherscan.io/address/0x17D3e3819830672DC29cb7192b6641c297b0B838#code
+   Successfully verified 1 contract(s).
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 2 --to 2 --network sepolia
+
+Starting migrations...
+======================
+> Network name:    'sepolia'
+> Network id:      11155111
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+2_deploy_token_adapter_l1.js
+============================
+Owner: 0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+
+   Deploying 'MockOFTAdapter'
+   --------------------------
+   > transaction hash:    0x4087f31de1296286e84648011dd41f135fc1a9018beb129cde649faa746b54dd
+   > Blocks: 1            Seconds: 9
+   > contract address:    0x7d9405441f805Da40E6e7f0cFf4eFdc175f18bf4
+   > block number:        5773325
+   > block timestamp:     1714034988
+   > account:             0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+   > balance:             0.283078264570620096
+   > gas used:            2478720 (0x25d280)
+   > gas price:           5.335945437 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01322631467360064 ETH
+
+MockOFTAdapterL1: 0x7d9405441f805Da40E6e7f0cFf4eFdc175f18bf4
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.01322631467360064 ETH
+
+Summary
+=======
+> Total deployments:   1
+> Final cost:          0.01322631467360064 ETH
+
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ npx truffle run verify MockOFTAdapter --verifiers=etherscan --network sepolia
+Verifying contracts on etherscan
+   Verifying MockOFTAdapter
+   Pass - Verified: https://sepolia.etherscan.io/address/0x7d9405441f805Da40E6e7f0cFf4eFdc175f18bf4#code
+   Successfully verified 1 contract(s).
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 3 --to 3 --network baseSepolia
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Starting migrations...
+======================
+> Network name:    'baseSepolia'
+> Network id:      84532
+> Block gas limit: 45000000 (0x2aea540)
+
+
+3_deploy_token_oft_l2.js
+========================
+Owner: 0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+
+   Deploying 'MockOFT'
+   -------------------
+   > transaction hash:    0x3030d2bdaf71c8e0d9db8b75cb0d8d07da7f7e89ebec4bd22974e21484388648
+   > Blocks: 5            Seconds: 9
+   > contract address:    0x17D3e3819830672DC29cb7192b6641c297b0B838
+   > block number:        9134012
+   > block timestamp:     1714036312
+   > account:             0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+   > balance:             0.192214514990447631
+   > gas used:            3024534 (0x2e2696)
+   > gas price:           2.500000302 gwei
+   > value sent:          0 ETH
+   > total cost:          0.007561335913409268 ETH
+
+MockOFTL2: 0x17D3e3819830672DC29cb7192b6641c297b0B838
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.007561335913409268 ETH
+
+Summary
+=======
+> Total deployments:   1
+> Final cost:          0.007561335913409268 ETH
+
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ npx truffle run verify MockOFT --verifiers=etherscan --network baseSepolia
+Verifying contracts on basescan
+   Verifying MockOFT
+   Pass - Verified: https://sepolia.basescan.org/address/0x17D3e3819830672DC29cb7192b6641c297b0B838#code
+   Successfully verified 1 contract(s).
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 4 --to 4 --network sepolia
+setPeer: 0x8b10d00d0e8c57e754e7f4a1c305d4e5cc4ab476107ccfaaf36bcbc0a6eff689
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 4 --to 4 --network baseSepolia
+setPeer: 0x9446d266aba859e1b6977cf84914dec3a07bac13436893ba200a960d4ba79223
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 4 --to 4 --network sepolia
+_sendParams: {"dstEid":40245,"to":"0x0000000000000000000000002f1C1C44b3c16659302Af16aB231BEF38C371c2E","amountLD":"5000000000000000000","minAmountLD":"5000000000000000000","extraOptions":"0x000301001101000000000000000000000000000186a0","composeMsg":"0x","oftCmd":"0x"}
+quoteSend { nativeFee: '1407112291388562762', lzTokenFee: '0' }
+approveTx: 5000000000000000000 0xae7c7b2d40c2398e601be06cdadb2c4e2feae3323cfa761f59a3a538ee7508d8
+send tx 0xc806386505108df6f1995b13687b345c59674b2586c94429c8c5b025620abef0
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 4 --to 4 --network baseSepolia
+_sendParams: {"dstEid":40161,"to":"0x0000000000000000000000002f1C1C44b3c16659302Af16aB231BEF38C371c2E","amountLD":"5000000000000000000","minAmountLD":"5000000000000000000","extraOptions":"0x000301001101000000000000000000000000000186a0","composeMsg":"0x","oftCmd":"0x"}
+quoteSend { nativeFee: '65874924867241', lzTokenFee: '0' }
+approveTx: 5000000000000000000 0x430ec0130b1f15c2ba3392ae1b089994f5e351c3c9037db845a5cd31c65303dd
+send tx 0x67757a452ae299914d38e64dcbb6e3c16443a1bf2fd9cb77e3d9a6319bc37f30

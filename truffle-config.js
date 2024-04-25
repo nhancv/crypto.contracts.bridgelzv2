@@ -5,8 +5,7 @@ const HDWalletProvider = require('@truffle/hdwallet-provider');
 const MNEMONIC = process.env.MNEMONIC;
 const INFURA_API_KEY = process.env.INFURA_API_KEY;
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
-const BSCSCAN_API_KEY = process.env.BSCSCAN_API_KEY;
-const ARBISCAN_API_KEY = process.env.ARBISCAN_API_KEY;
+const BASESCAN_API_KEY = process.env.BASESCAN_API_KEY;
 
 module.exports = {
   contracts_directory: './src/active',
@@ -33,6 +32,7 @@ module.exports = {
     sepolia: {
       provider: () => new HDWalletProvider(MNEMONIC, `https://sepolia.infura.io/v3/${INFURA_API_KEY}`),
       network_id: 11155111,
+      skipDryRun: true,
       networkCheckTimeout: 90000,
       timeoutBlocks: 200,
     },
@@ -45,22 +45,15 @@ module.exports = {
       // gas: 4698712,
       // gasPrice: 55000000000,
     },
-    bscTestnet: {
-      provider: () => new HDWalletProvider(MNEMONIC, process.env.BSC_WEB3_PROVIDER_TESTNET_HTTPS),
-      network_id: 97,
-      skipDryRun: true,
-      networkCheckTimeout: 90000,
-      timeoutBlocks: 200,
-      // gas: 4698712,
-      // gasPrice: 10000000000,
-    },
-    bscMainnet: {
-      provider: () => new HDWalletProvider(MNEMONIC, process.env.BSC_WEB3_PROVIDER_MAINNET_HTTPS),
-      network_id: 56,
-      networkCheckTimeout: 90000,
-      timeoutBlocks: 200,
-      // gas: 4698712, // can up to 100M
-      // gasPrice: 5000000000,
+    baseSepolia: {
+      provider: () => new HDWalletProvider(MNEMONIC, process.env.PROVIDER_BASE_TESTNET),
+      network_id: 84532,
+      // gasPrice: 100000000, // 0.1 Gwei
+      verify: {
+        apiUrl: 'https://api-sepolia.basescan.org/api',
+        apiKey: BASESCAN_API_KEY,
+        explorerUrl: 'https://sepolia.basescan.org/address',
+      },
     },
   },
 
@@ -73,8 +66,7 @@ module.exports = {
   plugins: ['truffle-plugin-verify', 'truffle-contract-size'],
   api_keys: {
     etherscan: ETHERSCAN_API_KEY,
-    bscscan: BSCSCAN_API_KEY,
-    arbiscan: ARBISCAN_API_KEY,
+    basescan: BASESCAN_API_KEY,
   },
 
   // Configure your compilers
