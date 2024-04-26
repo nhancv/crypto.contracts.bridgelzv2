@@ -314,3 +314,15 @@ setApprovalForAll 0x50c1085a6e4782f146ff2b1bc8199bcef36697471693bae4ba4d66572ee9
 Send token 0 to 40161: 0x0545b58111f724067091d675060a69a28c619888f0c270147febe3f9fda16e88
 
 https://testnet.layerzeroscan.com/address/0xe747d62e687955c4f7a018c4b0d768284607de18
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 9 --to 9 --network sepolia
+Owner: 0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+quoteSend { nativeFee: '66784616719916', lzTokenFee: '0' }
+setApprovalForAll 0x32ce108cedb95347646f1ac2b4d77fc5116bf1a7b074624fb5bcab5df63c5b82
+Send token 0 to 40245: 0xd4e4e5ce3661e50ebfa0668bda4ebef9d2a18c595b31005477e56f8bfd11400f
+
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 9 --to 9 --network baseSepolia
+Owner: 0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+quoteSend { nativeFee: '1340106881172748', lzTokenFee: '0' }
+setApprovalForAll 0x33a50445b208d9d05dbfedb220cfc5ea0b9f9a2f9760e7f8027b1ba9fc826eea
+Send token 0 to 40161: 0x805acc31fba1231ef62715f75df22a2c696f98ebe3103d44b8c7ed8e4fc577f4
