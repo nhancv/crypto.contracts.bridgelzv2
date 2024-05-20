@@ -101,6 +101,7 @@ const test = async (owner, currentToken, currentOApp, peerOApp, peerEId) => {
   };
   const _refundAddress = owner;
 
+  // Only needed if send from L1.
   const instanceToken = await ERC20.at(currentToken);
   const approveTx = await instanceToken.approve(instanceOApp.address, amount);
   console.log(`approveTx: ${amount}`, approveTx.tx);
