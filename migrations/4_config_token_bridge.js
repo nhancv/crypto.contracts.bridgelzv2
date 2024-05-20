@@ -38,6 +38,7 @@ const config = async (currentOApp, peerOApp, peerEId) => {
   // Endpoints: https://docs.layerzero.network/contracts/endpoint-addresses
   const { tx } = await instanceOApp.setPeer(peerEId, addressToBytes32(peerOApp));
   console.log('setPeer:', tx);
+  console.log('PeerId:', await instanceOApp.peers(peerEId));
 
   /**
    Default without enforced options -> You have to set extraOptions to sendParams.
@@ -63,7 +64,8 @@ const config = async (currentOApp, peerOApp, peerEId) => {
   ];
 
   // Call the setEnforcedOptions function
-  await instanceOApp.setEnforcedOptions(enforcedOptions);
+  const setEnforcedOptions = await instanceOApp.setEnforcedOptions(enforcedOptions);
+  console.log('setEnforcedOptions:', setEnforcedOptions.tx);
 };
 
 const test = async (owner, currentToken, currentOApp, peerOApp, peerEId) => {
