@@ -49,17 +49,17 @@ const config = async (currentOApp, peerOApp, peerEId) => {
    Tuple raw: [[eid,1,"0x00030100110100000000000000000000000000030d40"],[eid,2,"0x00030100110100000000000000000000000000030d40"]]
    */
   const DEFAULT_200K_GAS = '0x00030100110100000000000000000000000000030d40'; // Default 200k gas execution options
-  const CUSTOM_100K_GAS = '0x000301001101000000000000000000000000000186a0'; // Custom 100k
+  // const CUSTOM_100K_GAS = '0x000301001101000000000000000000000000000186a0'; // Custom 100k
   let enforcedOptions = [
     {
       eid: peerEId,
       msgType: 1, // uint16 internal constant SEND = 1;
-      options: CUSTOM_100K_GAS,
+      options: DEFAULT_200K_GAS,
     },
     {
       eid: peerEId,
       msgType: 2, // uint16 internal constant SEND_AND_CALL = 2;
-      options: CUSTOM_100K_GAS,
+      options: DEFAULT_200K_GAS,
     },
   ];
 
