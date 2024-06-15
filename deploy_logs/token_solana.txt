@@ -1,0 +1,34 @@
+crypto.contracts.bridgelzv2|master⚡ ⇒ truffle migrate -f 10 --to 10 --network sepolia
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Starting migrations...
+======================
+> Network name:    'sepolia'
+> Network id:      11155111
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+10_config_token_bridge_solana.js
+================================
+Owner: 0x2f1C1C44b3c16659302Af16aB231BEF38C371c2E
+setPeer: 0xd196f9b8d7b4a741f00bc93ced58daa45c359e668e1a6753b4931ced22820ac6
+PeerId: 0x1ad1eb48ce78d329171d6341b1b877ad5edc7283d8cd80117bdaa697c16cf075
+setEnforcedOptions: 0x146175bb09cabd1e93c8d130024d04f55ea4cf5d68e8f00d3ac90926e574a5a4
+   -------------------------------------
+   > Total cost:                   0 ETH
+
+Summary
+=======
+> Total deployments:   0
+> Final cost:          0 ETH
+
+
+crypto.contracts.bridgelzv2|master⚡ ⇒
+
+
+
+

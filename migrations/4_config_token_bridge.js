@@ -72,7 +72,7 @@ const test = async (owner, currentToken, currentOApp, peerOApp, peerEId) => {
   const instanceOApp = await OFTCore.at(currentOApp);
 
   const amount = toWei(5);
-  // https://docs.layerzero.network/contracts/options
+  // https://docs.layerzero.network/v2/developers/evm/gas-settings/options
   // Default 200k gas execution options
   // Since you already set enforced options with 200,000 gas you don't actually need to pack an extra set of options into extraOptions
   // const _defaultOptions = '0x00030100110100000000000000000000000000030d40'; // OAppOptionsType3 with 200k
@@ -82,7 +82,7 @@ const test = async (owner, currentToken, currentOApp, peerOApp, peerEId) => {
     dstEid: peerEId, // Destination endpoint ID.
     // Recipient address. https://github.com/LayerZero-Labs/LayerZero-v2/blob/bf4318b/oapp/contracts/oft/libs/OFTComposeMsgCodec.sol#L79C14-L79C30
     // Ex: 0x0000000000000000000000002f1C1C44b3c16659302Af16aB231BEF38C371c2E
-    to: addressToBytes32(owner, 64), // Ex: 0x000000000000000000000000{address without 0x}
+    to: addressToBytes32(owner), // Ex: 0x000000000000000000000000{address without 0x}
     amountLD: amount, // Amount to send in local decimals.
     minAmountLD: amount, // Minimum amount to send in local decimals.
     extraOptions: _defaultOptions, // Additional options supplied by the caller to be used in the LayerZero message.

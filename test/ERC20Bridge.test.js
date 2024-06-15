@@ -50,7 +50,7 @@ contract('ERC20Bridge.test', ([owner, bob, eric]) => {
 
     const _sendParams = {
       dstEid: eidB, // Destination endpoint ID.
-      to: addressToBytes32(owner, 64),
+      to: addressToBytes32(owner),
       amountLD: amount, // Amount to send in local decimals.
       minAmountLD: amount, // Minimum amount to send in local decimals.
       extraOptions: DEFAULT_OPTIONS, // Additional options supplied by the caller to be used in the LayerZero message.
@@ -73,7 +73,7 @@ contract('ERC20Bridge.test', ([owner, bob, eric]) => {
 
     const _sendParams = {
       dstEid: eidA, // Destination endpoint ID.
-      to: addressToBytes32(owner, 64),
+      to: addressToBytes32(owner),
       amountLD: amount, // Amount to send in local decimals.
       minAmountLD: amount, // Minimum amount to send in local decimals.
       extraOptions: DEFAULT_OPTIONS, // Additional options supplied by the caller to be used in the LayerZero message.

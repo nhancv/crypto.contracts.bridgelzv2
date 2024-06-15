@@ -1,0 +1,18 @@
+{
+  "name": "solana",
+  "version": "1.0.0",
+  "description": "https://docs.layerzero.network/v2/developers/evm/technical-reference/deployed-contracts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@layerzerolabs/lz-solana-sdk-v2": "^2.3.22",
+    "@layerzerolabs/lz-v2-utilities": "^2.3.22",
+    "@solana-developers/helpers": "^2.3.0",
+    "@solana/spl-token": "^0.4.6",
+    "@solana/web3.js": "^1.93.0",
+    "esrun": "^3.2.26"
+  }
+}
